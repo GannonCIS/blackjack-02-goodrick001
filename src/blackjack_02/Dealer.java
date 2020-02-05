@@ -17,16 +17,16 @@ public class Dealer {
         
     private Deck myDeck = new Deck();
  
-    public Hand dealOpeningHand(){
-        return null; // change out of null!!!!!!!!!!!!!!!!!!
+    public void dealOpeningHand(){
+       
     }
     
-    public Hand playOutPlayerHands(){
-        return null; // change out of null!!!!!!!!!!!!! 
+    public void playOutPlayerHands(){
+       
     }
     
-    public Hand playOutDealerHand(){
-        return null; //change out of null!!!!!!!!!!!!!!
+    public void playOutDealerHand(){
+        
     }
     public String declareWinner(){
         return null; //change out of null!!!!!!!!!!! 
