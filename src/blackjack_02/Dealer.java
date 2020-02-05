@@ -30,6 +30,22 @@ public class Dealer {
         int num = scan.nextInt();
         initPlayers(num);
     }
+    public void dealOutOpeningHand(){
+        
+    }
+    
+    public void playoutPlayerHands(){
+       
+        
+    }
+    
+    public void playOutDealerHand(){
+        
+    }
+    
+    public void declareWinner(){
+        
+    }
     
     private void initPlayers(int numOfPlayers){
         myPlayers = new Player[numOfPlayers];
