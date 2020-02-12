@@ -19,6 +19,8 @@ public class Dealer {
     
     private Hand dealerHand = new Hand();
     
+    private Hand myHand = new Hand();
+    
     Scanner scan = new Scanner(System.in);
     
     public Dealer (int numOfPlayers){
@@ -40,7 +42,7 @@ public class Dealer {
         
     }
     
-    public void playoutPlayerHands(){
+    public void playOutPlayerHands(){
        for(Player currPlayer : myPlayers){
            System.out.println(currPlayer.getName() + "'s Hand");
            currPlayer.getMyHand().printHand();
@@ -63,13 +65,38 @@ public class Dealer {
     }
     
     public void playOutDealerHand(){
-        
+        while(dealerHand.getScore() < 16 && dealerHand.getNumOfCards() < 5){
+            dealerHand.addCard(myDeck.dealCard());
+        }
+        System.out.println(" Dealer's Hnad ");
+        dealerHand.printHand();
     }
     
     public void declareWinner(){
-        
+        for(Player currPlayer : myPlayers){
+            currPlayer.getMyHand().getScore();
+            while(dealerHand.getScore() == 21 && dealerHand.getScore() > 
+                currPlayer.getMyHand().getScore() && dealerHand.getScore()
+                == currPlayer.getMyHand().getScore()){   
+                System.out.println("Dealer Wins");
+        }   
     }
-    
+        for(Player currPlayer : myPlayers){
+            currPlayer.getMyHand().getScore();
+            while(currPlayer.getMyHand().getScore() > dealerHand.getScore() 
+                    && currPlayer.getMyHand().getScore() == 21 
+                    && dealerHand.getScore() > 21){
+                System.out.println(currPlayer + " wins");
+            }
+        }
+        for(Player currPlayer : myPlayers){
+            currPlayer.getMyHand();
+            while(currPlayer.getMyHand().getNumOfCards() >= 5 
+                    && dealerHand.getNumOfCards() < 5 ){
+                System.out.println(currPlayer + " wins");
+            }
+        }
+}
     private void initPlayers(int numOfPlayers){
         myPlayers = new Player[numOfPlayers];
         for(int i = 0; i <myPlayers.length; i++){
