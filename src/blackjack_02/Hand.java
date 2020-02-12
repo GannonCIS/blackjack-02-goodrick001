@@ -51,7 +51,7 @@ public class Hand {
         for(int i = 0; i< numOfCards; i++){
             System.out.println(myCards[i].RANK + " of " + myCards[i].SUIT);
     }
-    
-    
+        System.out.println("\n");
+  }
     
 }
